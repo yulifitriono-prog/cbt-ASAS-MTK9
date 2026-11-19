@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CBT ASAS Matematika Kelas IX — Gasal 2026/2027</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f1f5f9;
+      color: #0f172a;
+    }
+    /* Tipografi Matematika */
+    .frac {
+      display: inline-flex;
+      flex-direction: column;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 0.88em;
+      line-height: 1.15;
+      margin: 0 3px;
+    }
+    .frac > span:first-child {
+      padding: 0 4px 1px 4px;
+      border-bottom: 1.5px solid currentColor;
+    }
+    .frac > span:last-child {
+      padding: 1px 4px 0 4px;
+    }
+    .radicand {
+      border-top: 1.5px solid currentColor;
+      padding-top: 1px;
+      display: inline-block;
+    }
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      body {
+        background-color: #ffffff;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- ==================== 1. HALAMAN LOGIN PESERTA CBT ==================== -->
+  <div id="screen-login" class="flex-1 flex flex-col justify-between">
+    <!-- Top Header CBT -->
+    <header class="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white shadow-md">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-xl bg-white/15 border border-white/25 flex items-center justify-center font-extrabold text-xl tracking-tight">
+            M9
+          </div>
+          <div>
+            <h1 class="font-bold text-base sm:text-lg leading-tight">SISTEM UJIAN BERBASIS KOMPUTER (CBT)</h1>
+            <p class="text-xs sm:text-sm text-blue-200">Asesmen Sumatif Akhir Semester (ASAS) Gasal • T.P. 2026/2027</p>
+          </div>
+        </div>
+        <span class="hidden sm:inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-200 border border-emerald-400/30">
+          ● Server Ujian Siap
+        </span>
+      </div>
+    </header>
+
+    <!-- Main Login Card -->
+    <main class="flex-1 flex items-center justify-center p-4 sm:p-6">
+      <div class="w-full max-w-4xl grid grid-cols-1 lg:grid-cols-12 bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+        <!-- Info Paket Ujian (Left) -->
+        <div class="lg:col-span-5 bg-slate-900 text-white p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold mb-4 border border-blue-400/30">
+              KURIKULUM MERDEKA
+            </span>
+            <h2 class="text-2xl font-bold leading-snug mb-2">Matematika Kelas IX</h2>
+            <p class="text-slate-300 text-sm mb-6">
+              Paket soal disusun 100% sesuai Kisi-Kisi ASAS Gasal Tahun Pelajaran 2026/2027.
+            </p>
+
+            <div class="space-y-3 text-sm">
+              <div class="flex items-center justify-between py-2 border-b border-slate-800">
+                <span class="text-slate-400">Jumlah Butir Soal</span>
+                <span class="font-semibold text-white">40 Soal (30 PG + 10 PGK)</span>
+              </div>
+              <div class="flex items-center justify-between py-2 border-b border-slate-800">
+                <span class="text-slate-400">Alokasi Waktu</span>
+                <span class="font-semibold text-white">120 Menit</span>
+              </div>
+              <div class="flex items-center justify-between py-2 border-b border-slate-800">
+                <span class="text-slate-400">Cakupan Materi</span>
+                <span class="font-semibold text-white text-right">Eksponen &amp; Akar, BRSD, BRSL</span>
+              </div>
+              <div class="flex items-center justify-between py-2">
+                <span class="text-slate-400">Token Ujian</span>
+                <span class="font-mono font-bold text-amber-400 bg-amber-400/10 px-2.5 py-0.5 rounded border border-amber-400/30">ASAS2026</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-4 border-t border-slate-800 text-xs text-slate-400 leading-relaxed">
+            <strong>Petunjuk Singkat:</strong> Pilih jawaban yang paling tepat. Gunakan tombol <em>Ragu-Ragu</em> jika ingin meninjau ulang soal sebelum mengakhiri ujian.
+          </div>
+        </div>
+
+        <!-- Form Identitas Peserta (Right) -->
+        <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-center">
+          <h3 class="text-xl font-bold text-slate-800 mb-1">Konfirmasi Data Peserta</h3>
+          <p class="text-sm text-slate-500 mb-6">Silakan lengkapi identitas Anda sebelum memulai sesi ujian.</p>
+
+          <form id="login-form" class="space-y-4" onsubmit="handleStartExam(event)">
+            <div>
+              <label for="input-nama" class="block text-sm font-semibold text-slate-700 mb-1">Nama Lengkap Peserta</label>
+              <input
+                type="text"
+                id="input-nama"
+                placeholder="Contoh: Ahmad Fauzan"
+                class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600 text-sm"
+                required
+              />
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="input-nis" class="block text-sm font-semibold text-slate-700 mb-1">Nomor Peserta / NIS</label>
+                <input
+                  type="text"
+                  id="input-nis"
+                  placeholder="Contoh: 262709001"
+                  class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600 text-sm"
+                  required
+                />
+              </div>
+              <div>
+                <label for="input-kelas" class="block text-sm font-semibold text-slate-700 mb-1">Kelas</label>
+                <select
+                  id="input-kelas"
+                  class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600 text-sm bg-white"
+                >
+                  <option value="IX - A">IX - A</option>
+                  <option value="IX - B">IX - B</option>
+                  <option value="IX - C">IX - C</option>
+                  <option value="IX - D">IX - D</option>
+                  <option value="IX - E">IX - E</option>
+                  <option value="IX - F">IX - F</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="input-token" class="block text-sm font-semibold text-slate-700 mb-1">Token Ujian</label>
+              <input
+                type="text"
+                id="input-token"
+                value="ASAS2026"
+                placeholder="Masukkan token ujian"
+                class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600 text-sm font-mono uppercase"
+                required
+              />
+              <p id="login-error" class="hidden text-xs text-red-600 font-medium mt-1.5"></p>
+            </div>
+
+            <div class="pt-2">
+              <button
+                type="submit"
+                class="w-full py-3 px-6 rounded-xl bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-bold text-sm shadow-lg shadow-blue-600/25 transition flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <span>MULAI UJIAN SEKARANG</span>
+                <span>&rarr;</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-center py-4 text-xs text-slate-500">
+      Aplikasi Simulasi CBT • Asesmen Sumatif Akhir Semester (ASAS) Gasal Matematika Kelas IX
+    </footer>
+  </div>
+
+  <!-- ==================== 2. HALAMAN PENGERJAAN UJIAN CBT ==================== -->
+  <div id="screen-exam" class="hidden flex-1 flex flex-col min-h-screen">
+    <!-- Sticky Exam Header -->
+    <header class="sticky top-0 z-30 bg-blue-900 text-white shadow-md">
+      <div class="max-w-7xl mx-auto px-3 sm:px-6 py-2.5 flex items-center justify-between gap-2">
+        <div class="flex items-center gap-2.5 min-w-0">
+          <div class="w-9 h-9 rounded-lg bg-white/15 flex items-center justify-center font-extrabold text-sm shrink-0">
+            CBT
+          </div>
+          <div class="truncate">
+            <div class="font-bold text-xs sm:text-sm truncate">ASAS GASAL MATEMATIKA • KELAS IX</div>
+            <div id="header-student-info" class="text-[11px] sm:text-xs text-blue-200 truncate">Peserta: -</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+          <!-- Font Size Controls -->
+          <div class="hidden md:flex items-center bg-blue-950/60 rounded-lg p-1 border border-blue-700/60">
+            <button type="button" onclick="changeFontSize(-1)" class="px-2 py-0.5 text-xs font-bold hover:bg-blue-800 rounded cursor-pointer" title="Perkecil Teks">A-</button>
+            <button type="button" onclick="changeFontSize(0)" class="px-2 py-0.5 text-xs font-bold hover:bg-blue-800 rounded cursor-pointer" title="Ukuran Normal">A</button>
+            <button type="button" onclick="changeFontSize(1)" class="px-2 py-0.5 text-xs font-bold hover:bg-blue-800 rounded cursor-pointer" title="Perbesar Teks">A+</button>
+          </div>
+
+          <!-- Countdown Timer -->
+          <div id="timer-box" class="flex items-center gap-1.5 bg-slate-900/90 border border-slate-700 px-3 py-1.5 rounded-xl">
+            <span class="text-[11px] text-slate-300 hidden sm:inline">Sisa Waktu:</span>
+            <span id="timer-display" class="font-mono font-bold text-sm sm:text-base text-emerald-400">02:00:00</span>
+          </div>
+
+          <!-- Mobile Drawer Trigger -->
+          <button
+            type="button"
+            onclick="toggleMobileNav(true)"
+            class="lg:hidden px-3 py-1.5 rounded-xl bg-blue-700 hover:bg-blue-600 border border-blue-500 text-xs font-bold flex items-center gap-1.5 cursor-pointer"
+          >
+            <span>Daftar Soal</span>
+            <span id="mobile-progress-badge" class="bg-white text-blue-900 px-1.5 py-0.2 rounded-md text-[11px]">0/40</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main CBT Workspace -->
+    <div class="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 py-4 sm:py-6 flex flex-col lg:flex-row gap-5">
+      <!-- Question Area (Left / Center) -->
+      <section class="flex-1 flex flex-col bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+        <!-- Question Subheader -->
+        <div class="px-4 sm:px-6 py-3.5 bg-slate-50 border-b border-slate-200 flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2.5">
+            <span class="px-3 py-1 rounded-lg bg-blue-600 text-white font-bold text-xs sm:text-sm">
+              SOAL NO. <span id="q-number-label">1</span>
+            </span>
+            <span id="q-type-badge" class="px-2.5 py-1 rounded-lg bg-indigo-50 text-indigo-700 border border-indigo-200 font-semibold text-xs">
+              Pilihan Ganda
+            </span>
+          </div>
+          <span id="q-topic-label" class="text-xs font-medium text-slate-500">
+            Bilangan Berpangkat &amp; Bentuk Akar
+          </span>
+        </div>
+
+        <!-- Question Body & Options -->
+        <div id="question-content-area" class="flex-1 p-4 sm:p-6 md:p-8 text-slate-800 leading-relaxed" style="font-size: 16px;">
+          <!-- Injected dynamically via JS -->
+        </div>
+
+        <!-- Bottom Action Bar -->
+        <div class="px-4 sm:px-6 py-3.5 bg-slate-50 border-t border-slate-200 flex items-center justify-between gap-2">
+          <button
+            type="button"
+            id="btn-prev"
+            onclick="navigateQuestion(-1)"
+            class="px-3.5 sm:px-5 py-2.5 rounded-xl bg-white hover:bg-slate-100 disabled:opacity-40 disabled:pointer-events-none text-slate-700 font-semibold text-xs sm:text-sm border border-slate-300 shadow-xs transition cursor-pointer"
+          >
+            &larr; Sebelumnya
+          </button>
+
+          <button
+            type="button"
+            id="btn-doubt"
+            onclick="toggleDoubt()"
+            class="px-3.5 sm:px-5 py-2.5 rounded-xl bg-amber-100 hover:bg-amber-200 text-amber-900 border border-amber-300 font-semibold text-xs sm:text-sm transition flex items-center gap-2 cursor-pointer"
+          >
+            <span id="doubt-checkbox" class="w-4 h-4 rounded border border-amber-600 bg-white inline-flex items-center justify-center text-xs font-bold"></span>
+            <span>Ragu-Ragu</span>
+          </button>
+
+          <button
+            type="button"
+            id="btn-next"
+            onclick="navigateQuestion(1)"
+            class="px-3.5 sm:px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs sm:text-sm shadow-sm transition cursor-pointer"
+          >
+            Selanjutnya &rarr;
+          </button>
+        </div>
+      </section>
+
+      <!-- Navigation Grid Sidebar (Desktop) -->
+      <aside class="hidden lg:flex lg:w-80 shrink-0 flex-col bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden self-start sticky top-20">
+        <div class="px-5 py-3.5 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+          <h3 class="font-bold text-sm text-slate-800">Navigasi Nomor Soal</h3>
+          <span id="desktop-progress-text" class="text-xs font-semibold text-blue-700 bg-blue-50 px-2.5 py-0.5 rounded-full border border-blue-200">
+            0 / 40 Terjawab
+          </span>
+        </div>
+
+        <div class="p-4">
+          <div id="desktop-nav-grid" class="grid grid-cols-5 gap-2">
+            <!-- Buttons 1..40 -->
+          </div>
+
+          <!-- Legend -->
+          <div class="mt-5 pt-4 border-t border-slate-200 grid grid-cols-2 gap-2 text-xs text-slate-600">
+            <div class="flex items-center gap-2">
+              <span class="w-4 h-4 rounded bg-blue-600 inline-block shrink-0"></span>
+              <span>Sedang dibuka</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-4 h-4 rounded bg-emerald-500 inline-block shrink-0"></span>
+              <span>Sudah dijawab</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-4 h-4 rounded bg-amber-400 inline-block shrink-0"></span>
+              <span>Ragu-ragu</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-4 h-4 rounded bg-white border border-slate-300 inline-block shrink-0"></span>
+              <span>Belum dijawab</span>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            onclick="openFinishModal()"
+            class="mt-5 w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md shadow-emerald-600/20 transition cursor-pointer"
+          >
+            Selesai &amp; Kumpulkan Ujian
+          </button>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Drawer Modal -->
+  <div id="mobile-nav-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-end sm:items-center justify-center p-0 sm:p-4">
+    <div class="bg-white w-full sm:max-w-md rounded-t-2xl sm:rounded-2xl shadow-2xl border border-slate-200 overflow-hidden max-h-[85vh] flex flex-col">
+      <div class="px-5 py-3.5 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+        <div>
+          <h3 class="font-bold text-sm text-slate-800">Daftar Nomor Soal (1 &ndash; 40)</h3>
+          <p id="mobile-modal-summary" class="text-xs text-slate-500">0 Terjawab • 0 Ragu-ragu</p>
+        </div>
+        <button type="button" onclick="toggleMobileNav(false)" class="w-8 h-8 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold text-sm cursor-pointer">
+          &times;
+        </button>
+      </div>
+      <div class="p-4 overflow-y-auto">
+        <div id="mobile-nav-grid" class="grid grid-cols-5 gap-2"></div>
+        <div class="mt-4 pt-3 border-t border-slate-200 grid grid-cols-2 gap-2 text-xs text-slate-600">
+          <div class="flex items-center gap-2"><span class="w-3.5 h-3.5 rounded bg-blue-600 inline-block"></span> Aktif</div>
+          <div class="flex items-center gap-2"><span class="w-3.5 h-3.5 rounded bg-emerald-500 inline-block"></span> Terjawab</div>
+          <div class="flex items-center gap-2"><span class="w-3.5 h-3.5 rounded bg-amber-400 inline-block"></span> Ragu-ragu</div>
+          <div class="flex items-center gap-2"><span class="w-3.5 h-3.5 rounded bg-white border border-slate-300 inline-block"></span> Kosong</div>
+        </div>
+      </div>
+      <div class="p-4 bg-slate-50 border-t border-slate-200">
+        <button
+          type="button"
+          onclick="toggleMobileNav(false); openFinishModal();"
+          class="w-full py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm cursor-pointer"
+        >
+          Selesai &amp; Kumpulkan Ujian
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirmation Finish Exam Modal -->
+  <div id="finish-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white w-full max-w-md rounded-2xl shadow-2xl border border-slate-200 overflow-hidden">
+      <div class="p-6">
+        <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl font-bold mb-4">
+          !
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-1">Konfirmasi Selesai Ujian</h3>
+        <p class="text-sm text-slate-600 mb-4">
+          Apakah Anda yakin ingin mengakhiri ujian dan mengumpulkan semua jawaban sekarang?
+        </p>
+
+        <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200 space-y-2 text-sm mb-5">
+          <div class="flex justify-between">
+            <span class="text-slate-600">Soal Terjawab:</span>
+            <span id="summary-answered" class="font-bold text-emerald-600">0 dari 40</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-slate-600">Ditandai Ragu-Ragu:</span>
+            <span id="summary-doubt" class="font-bold text-amber-600">0 soal</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-slate-600">Belum Dijawab:</span>
+            <span id="summary-unanswered" class="font-bold text-red-600">40 soal</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button
+            type="button"
+            onclick="closeFinishModal()"
+            class="flex-1 py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-sm transition cursor-pointer"
+          >
+            Kembali ke Soal
+          </button>
+          <button
+            type="button"
+            onclick="submitExam()"
+            class="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition cursor-pointer"
+          >
+            Ya, Kumpulkan
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 3. HALAMAN HASIL & PEMBAHASAN UJIAN ==================== -->
+  <div id="screen-result" class="hidden flex-1 flex flex-col">
+    <header class="bg-slate-900 text-white shadow-md no-print">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h1 class="font-bold text-base sm:text-lg">LAPORAN HASIL UJIAN CBT &amp; PEMBAHASAN</h1>
+          <p class="text-xs text-slate-300">Asesmen Sumatif Akhir Semester (ASAS) Gasal Matematika Kelas IX</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button
+            type="button"
+            onclick="window.print()"
+            class="px-3.5 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-semibold transition cursor-pointer"
+          >
+            Cetak Hasil (PDF)
+          </button>
+          <button
+            type="button"
+            onclick="resetSimulation()"
+            class="px-3.5 py-2 rounded-xl bg-slate-700 hover:bg-slate-600 text-white text-xs sm:text-sm font-semibold transition cursor-pointer"
+          >
+            Ulangi Ujian
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1 max-w-6xl w-full mx-auto px-4 py-6 space-y-6">
+      <!-- Score & Identity Overview -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+        <!-- Score Card -->
+        <div class="lg:col-span-4 bg-gradient-to-br from-blue-800 to-indigo-900 text-white rounded-2xl p-6 shadow-lg flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-semibold uppercase tracking-wider text-blue-200">Nilai Akhir Peserta</span>
+            <div class="mt-2 flex items-baseline gap-2">
+              <span id="res-score" class="text-5xl font-extrabold">0</span>
+              <span class="text-lg text-blue-200">/ 100</span>
+            </div>
+            <div id="res-predicate" class="mt-3 inline-block px-3 py-1 rounded-full text-xs font-bold bg-white/15 border border-white/25">
+              Predikat: -
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-white/15 grid grid-cols-3 gap-2 text-center">
+            <div class="bg-white/10 rounded-xl p-2">
+              <div id="res-correct" class="text-lg font-bold text-emerald-300">0</div>
+              <div class="text-[11px] text-blue-100">Benar</div>
+            </div>
+            <div class="bg-white/10 rounded-xl p-2">
+              <div id="res-wrong" class="text-lg font-bold text-rose-300">0</div>
+              <div class="text-[11px] text-blue-100">Salah</div>
+            </div>
+            <div class="bg-white/10 rounded-xl p-2">
+              <div id="res-empty" class="text-lg font-bold text-amber-300">0</div>
+              <div class="text-[11px] text-blue-100">Kosong</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Participant Info & Topic Mastery -->
+        <div class="lg:col-span-8 bg-white rounded-2xl p-6 shadow-sm border border-slate-200 flex flex-col justify-between">
+          <div>
+            <h3 class="font-bold text-base text-slate-800 mb-3">Identitas Peserta &amp; Analisis Capaian Kisi-Kisi</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs mb-5">
+              <div>
+                <span class="text-slate-500 block">Nama Peserta</span>
+                <strong id="res-name" class="text-slate-800 text-sm">-</strong>
+              </div>
+              <div>
+                <span class="text-slate-500 block">Nomor / NIS</span>
+                <strong id="res-nis" class="text-slate-800 text-sm">-</strong>
+              </div>
+              <div>
+                <span class="text-slate-500 block">Kelas</span>
+                <strong id="res-class" class="text-slate-800 text-sm">-</strong>
+              </div>
+              <div>
+                <span class="text-slate-500 block">Durasi Pengerjaan</span>
+                <strong id="res-duration" class="text-slate-800 text-sm">-</strong>
+              </div>
+            </div>
+
+            <!-- Topic Bars -->
+            <div id="topic-analysis-container" class="space-y-3">
+              <!-- Injected dynamically -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review & Explanations -->
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+        <div class="px-5 py-4 bg-slate-50 border-b border-slate-200 flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <h3 class="font-bold text-base text-slate-800">Kunci Jawaban &amp; Pembahasan Lengkap (40 Soal)</h3>
+            <p class="text-xs text-slate-500">Periksa perbandingan jawaban Anda dengan kunci jawaban dan langkah penyelesaiannya.</p>
+          </div>
+          <div class="flex items-center gap-1.5 no-print">
+            <button type="button" onclick="filterReview('all')" id="filter-all" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-blue-600 text-white cursor-pointer">Semua (40)</button>
+            <button type="button" onclick="filterReview('wrong')" id="filter-wrong" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-200 text-slate-700 hover:bg-slate-300 cursor-pointer">Salah / Kosong</button>
+            <button type="button" onclick="filterReview('correct')" id="filter-correct" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-200 text-slate-700 hover:bg-slate-300 cursor-pointer">Benar</button>
+          </div>
+        </div>
+
+        <div id="review-list" class="divide-y divide-slate-200">
+          <!-- Injected dynamically -->
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Helper pemformat pecahan & akar
+    const frac = (num, den) => `<span class="frac"><span>${num}</span><span>${den}</span></span>`;
+    const rad = (val) => `&radic;<span class="radicand">${val}</span>`;
+
+    // Bank Soal Lengkap 40 Nomor (100% sesuai Kisi-Kisi ASAS Matematika Gasal Kelas IX 2026/2027)
+    const QUESTIONS = [
+      // === MATERI 1: BILANGAN BERPANGKAT, BENTUK AKAR, DAN BILANGAN BAKU (NO. 1 - 14) ===
+      {
+        no: 1,
+        type: "PG",
+        topic: "Bilangan Berpangkat & Bentuk Akar",
+        text: `Hasil dari (&minus;3)<sup>4</sup> + (&minus;2)<sup>3</sup> &minus; 5<sup>2</sup> adalah ....`,
+        options: { A: "&minus;98", B: "48", C: "64", D: "98" },
+        answer: "B",
+        explanation: `(&minus;3)<sup>4</sup> + (&minus;2)<sup>3</sup> &minus; 5<sup>2</sup> = 81 + (&minus;8) &minus; 25 = 73 &minus; 25 = 48.`
+      },
+      {
+        no: 2,
+        type: "PG",
+        topic: "Bilangan Berpangkat & Bentuk Akar",
+        text: `Bentuk sederhana dari ${frac("2<sup>7</sup> &times; 2<sup>5</sup>", "2<sup>9</sup>")} adalah ....`,
+        options: { A: "2<sup>2</sup>", B: "2<sup>3</sup>", C: "2<sup>4</sup>", D: "2<sup>21</sup>" },
+        explanation: `2<sup>7 + 5 &minus; 9</sup> = 2<sup>12 &minus; 9</sup> = 2<sup>3</sup>.`
+      },
+      {
+        no: 3,
+        type: "PG",
+        topic: "Bilangan Berpangkat & Bentuk Akar",
+        text: `Hasil dari 4<sup>&minus;2</sup> + 2<sup>&minus;3</sup> &minus; 7<sup>0</sup> adalah ....`,
+        options: {
+          A: `&minus;${frac("13", "16")}`,
+          B: `&minus;${frac("11", "16")}`,
+          C: `${frac("3", "16")}`,
+          D: `${frac("19", "16")}`
+        },
+        answer: "A",
+        explanation: `${frac("1", "16")} + ${frac("1", "8")} &minus; 1 = ${frac("1 + 2 &minus; 16", "16")} = &minus;${frac("13", "16")}.`
+      },
+      {
+        no: 4,
+        type: "PG",
+        topic: "Bilangan Berpangkat & Bentuk Akar",
+        text: `Bentuk sederhana dari ${frac("(3<i>a</i><sup>2</sup><i>b</i><sup>&minus;3</sup>)<sup>2</sup>", "<i>a</i><sup>&minus;1</sup><i>b</i><sup>&minus;4</sup>")} adalah ....`,
+        options: {
+          A: `${frac("6<i>a</i><sup>3</sup>", "<i>b</i><sup>2</sup>")}`,
+          B: `${frac("9<i>a</i><sup>3</sup>", "<i>b</i><sup>10</sup>")}`,
+          C: `${frac("9<i>a</i><sup>5</sup>", "<i>b</i><sup>2</sup>")}`,
+          D: `9<i>a</i><sup>5</sup><i>b</i><sup>2</sup>`
+        },
+        answer: "C",
+        explanation: `${frac("9<i>a</i><sup>4</sup><i>b</i><sup>&minus;6</sup>", "<i>a</i><sup>&minus;1</sup><i>b</i><sup>&minus;4</sup>")} = 9<i>a</i><sup>4 &minus; (&minus;1)</sup><i>b</i><sup>&minus;6 &minus; (&minus;4)</sup> = 9<i>a</i><sup>5</sup><i>b</i><sup>&minus;2</sup> = ${frac("9<i>a</i><sup>5</sup>", "<i>b</i><sup>2</sup>")}.`
+      },
+      {
+        no: 5,
+        type: "PG",
+        topic: "Bilangan Berpangkat & Bentuk Akar",
+        text: `Nilai <i>x</i> yang memenuhi persamaan eksponen 3<sup>2<i>x</i> &minus; 1</sup> = 27<sup><i>x</i> &minus; 2</sup> adalah ....`,
+        options: { A: "3", B: "4", C: "5", D: "7" },
+        answer: "C",
+        explanation: `3<sup>2<i>x</i> &minus; 1</sup> = (3<sup>3</sup>)<sup><i>x</i> &minus; 2</sup> = 3<sup>3<i>x</i> &minus; 6</sup> &rarr; 2<i>x</i> &minus; 1 = 3<i>x</i> &minus; 6 &rarr; <i>x</i> = 5.`
+      },
+      {
+        no: 6,
+        type: "PG",
+        topic: "Bilangan Berpangkat & Bentuk Akar",
+        text: `Dalam sebuah penelitian laboratorium, mula-mula terdapat 200 bakteri. Bakteri tersebut membelah diri menjadi 2 setiap 15 menit. Namun, tepat pada menit ke-30, peneliti memberikan zat antibiotik sehingga jumlah bakteri berkurang menjadi setengahnya, dan setelah itu bakteri kembali membelah menjadi 2 setiap 15 menit. Banyak bakteri setelah 1 jam adalah ....`,
+        options: { A: "800 bakteri", B: "1.600 bakteri", C: "2.400 bakteri", D: "3.200 bakteri" },
+        answer: "B",
+        explanation: `<i>t</i> = 0: 200; <i>t</i> = 15': 400; <i>t</i> = 30' (sebelum zat): 800 &rarr; diberi zat menjadi &frac12; &times; 800 = 400; <i>t</i> = 45': 800; <i>t</i> = 60' (1 jam): 1.600 bakteri.`
+      },
+      {
+        no: 7,
+        type: "PGK",
+        topic: "Bilangan Berpangkat & Bentuk Akar",
+        text: `Perhatikan pernyataan-pernyataan mengenai sifat bilangan berpangkat dan bentuk akar berikut (dengan <i>a</i>, <i>b</i> &gt; 0):`,
+        statements: [
+          `(1) (<i>a</i><sup><i>m</i></sup>)<sup><i>n</i></sup> = <i>a</i><sup><i>m</i> &times; <i>n</i></sup>`,
+          `(2) (<i>a</i> + <i>b</i>)<sup>2</sup> = <i>a</i><sup>2</sup> + <i>b</i><sup>2</sup>`,
+          `(3) ${rad("<i>a</i> &times; <i>b</i>")} = ${rad("<i>a</i>")} &times; ${rad("<i>b</i>")}`,
+          `(4) ${rad("<i>a</i> + <i>b</i>")} = ${rad("<i>a</i>")} + ${rad("<i>b</i>")}`
+        ],
+        questionPrompt: `Pernyataan-pernyataan di atas yang bernilai <strong>benar</strong> adalah ....`,
+        options: { A: "(1) dan (2)", B: "(1) dan (3)", C: "(2) dan (4)", D: "(3) dan (4)" },
+        answer: "B",
+        explanation: `Sifat yang benar adalah (1) (<i>a</i><sup><i>m</i></sup>)<sup><i>n</i></sup> = <i>a</i><sup><i>m</i> &times; <i>n</i></sup> dan (3) ${rad("<i>ab</i>")} = ${rad("<i>a</i>")} &times; ${rad("<i>b</i>")}.`
+      },
+      {
+        no: 8,
+        type: "PGK",
+        topic: "Bilangan Berpangkat & Bentuk Akar",
+        text: `Perhatikan tabel data ukuran benda mikroskopis dan jarak benda langit berikut!`,
+        tableHtml: `
+          <div class="overflow-x-auto my-3">
+            <table class="min-w-full sm:min-w-[420px] border-collapse border border-slate-300 text-sm">
+              <thead>
+                <tr class="bg-slate-100">
+                  <th class="border border-slate-300 px-3 py-2 text-left">Objek Pengamatan</th>
+                  <th class="border border-slate-300 px-3 py-2 text-left">Ukuran / Jarak</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="border border-slate-300 px-3 py-1.5">Diameter virus influenza</td><td class="border border-slate-300 px-3 py-1.5">0,00000012 m</td></tr>
+                <tr><td class="border border-slate-300 px-3 py-1.5">Diameter sel darah merah</td><td class="border border-slate-300 px-3 py-1.5">0,0000075 m</td></tr>
+                <tr><td class="border border-slate-300 px-3 py-1.5">Jarak rata-rata Bumi ke Bulan</td><td class="border border-slate-300 px-3 py-1.5">384.000.000 m</td></tr>
+                <tr><td class="border border-slate-300 px-3 py-1.5">Jarak rata-rata Bumi ke Matahari</td><td class="border border-slate-300 px-3 py-1.5">150.000.000.000 m</td></tr>
+              </tbody>
+            </table>
+          </div>
+        `,
+        statements: [
+          `(1) Penulisan bentuk baku diameter virus influenza adalah 1,2 &times; 10<sup>&minus;7</sup> m.`,
+          `(2) Penulisan bentuk baku jarak Bumi ke Matahari adalah 15 &times; 10<sup>10</sup> m.`,
+          `(3) Jarak Bumi ke Matahari sekitar 3,9 &times; 10<sup>2</sup> kali lebih jauh daripada jarak Bumi ke Bulan.`,
+          `(4) Diameter sel darah merah 6,25 kali lebih besar daripada diameter virus influenza.`
+        ],
+        questionPrompt: `Pernyataan yang <strong>benar</strong> ditunjukkan oleh nomor ....`,
+        options: { A: "(1) dan (2)", B: "(1) dan (3)", C: "(2) dan (4)", D: "(3) dan (4)" },
+        answer: "B",
+        explanation: `(1) 0,00000012 = 1,2 &times; 10<sup>&minus;7</sup> m (benar); (2) salah karena 15 &ge; 10 (seharusnya 1,5 &times; 10<sup>11</sup>); (3) ${frac("1,5 &times; 10<sup>11</sup>", "3,84 &times; 10<sup>8</sup>")} &approx; 3,9 &times; 10<sup>2</sup> kali (benar); (4) salah karena 62,5 kali.`
+      },
+      {
+        no: 9,
+        type: "PG",
+        topic: "Bilangan Berpangkat & Bentuk Akar",
+        text: `Bentuk paling sederhana dari ${rad("180")} adalah ....`,
+        options: {
+          A: `3${rad("20")}`,
+          B: `5${rad("6")}`,
+          C: `6${rad("5")}`,
+          D: `9${rad("2")}`
+        },
+        answer: "C",
+        explanation: `${rad("180")} = ${rad("36 &times; 5")} = 6${rad("5")}.`
+      },
+      {
+        no: 10,
+        type: "PG",
+        topic: "Bilangan Berpangkat & Bentuk Akar",
+        text: `Hasil dari 3${rad("12")} + ${rad("75")} &minus; 2${rad("27")} adalah ....`,
+        options: {
+          A: `3${rad("3")}`,
+          B: `5${rad("3")}`,
+          C: `7${rad("3")}`,
+          D: `17${rad("3")}`
+        },
+        answer: "B",
+        explanation: `3(2${rad("3")}) + 5${rad("3")} &minus; 2(3${rad("3")}) = 6${rad("3")} + 5${rad("3")} &minus; 6${rad("3")} = 5${rad("3")}.`
+      },
+      {
+        no: 11,
+        type: "PG",
+        topic: "Bilangan Berpangkat & Bentuk Akar",
+        text: `Hasil dari ${frac(`${rad("6")} &times; ${rad("10")}`, rad("3"))} dalam bentuk rasional paling sederhana adalah ....`,
+        options: {
+          A: `${rad("5")}`,
+          B: `2${rad("5")}`,
+          C: `2${rad("15")}`,
+          D: `4${rad("5")}`
+        },
+        answer: "B",
+        explanation: `${frac(rad("60"), rad("3"))} = ${rad("20")} = ${rad("4 &times; 5")} = 2${rad("5")}.`
+      },
+      {
+        no: 12,
+        type: "PG",
+        topic: "Bilangan Berpangkat & Bentuk Akar",
+        text: `Bentuk rasional dari ${frac("12", `4 &minus; ${rad("10")}`)} adalah ....`,
+        options: {
+          A: `8 &minus; 2${rad("10")}`,
+          B: `8 + 2${rad("10")}`,
+          C: `16 + 4${rad("10")}`,
+          D: `24 + 6${rad("10")}`
+        },
+        answer: "B",
+        explanation: `${frac(`12(4 + ${rad("10")})`, "16 &minus; 10")} = ${frac(`12(4 + ${rad("10")})`, "6")} = 2(4 + ${rad("10")}) = 8 + 2${rad("10")}.`
+      },
+      {
+        no: 13,
+        type: "PG",
+        topic: "Bilangan Berpangkat & Bentuk Akar",
+        text: `Penulisan bentuk baku (notasi ilmiah) dari bilangan 0,000000458 adalah ....`,
+        options: {
+          A: `4,58 &times; 10<sup>&minus;8</sup>`,
+          B: `4,58 &times; 10<sup>&minus;7</sup>`,
+          C: `4,58 &times; 10<sup>7</sup>`,
+          D: `45,8 &times; 10<sup>&minus;8</sup>`
+        },
+        answer: "B",
+        explanation: `0,000000458 = 4,58 &times; 10<sup>&minus;7</sup>.`
+      },
+      {
+        no: 14,
+        type: "PG",
+        topic: "Bilangan Berpangkat & Bentuk Akar",
+        text: `Kecepatan cahaya di ruang hampa adalah sekitar 3 &times; 10<sup>8</sup> m/s. Jika jarak antara Matahari dan planet Mars adalah 2,28 &times; 10<sup>11</sup> m, maka waktu yang dibutuhkan cahaya Matahari untuk sampai ke planet Mars adalah ....`,
+        options: {
+          A: `7,6 &times; 10<sup>1</sup> detik`,
+          B: `7,6 &times; 10<sup>2</sup> detik`,
+          C: `7,6 &times; 10<sup>3</sup> detik`,
+          D: `6,84 &times; 10<sup>19</sup> detik`
+        },
+        answer: "B",
+        explanation: `<i>t</i> = ${frac("2,28 &times; 10<sup>11</sup>", "3 &times; 10<sup>8</sup>")} = 0,76 &times; 10<sup>3</sup> = 7,6 &times; 10<sup>2</sup> detik.`
+      },
+
+      // === MATERI 2: BANGUN RUANG SISI DATAR (NO. 15 - 27) ===
+      {
+        no: 15,
+        type: "PGK",
+        topic: "Bangun Ruang Sisi Datar",
+        text: `Perhatikan gambar kubus <i>ABCD.EFGH</i> di bawah ini!`,
+        svg: `
+          <svg xmlns="http://www.w3.org/2000/svg" width="220" height="180" viewBox="0 0 210 175" class="border border-slate-200 rounded-xl bg-white p-1">
+            <rect x="35" y="55" width="90" height="90" fill="none" stroke="#0f172a" stroke-width="1.6" />
+            <polyline points="35,55 77,25 167,25 167,115 125,145" fill="none" stroke="#0f172a" stroke-width="1.6" />
+            <line x1="125" y1="55" x2="167" y2="25" stroke="#0f172a" stroke-width="1.6" />
+            <polyline points="77,25 77,115 167,115" fill="none" stroke="#475569" stroke-width="1.2" stroke-dasharray="4,3" />
+            <line x1="35" y1="145" x2="77" y2="115" stroke="#475569" stroke-width="1.2" stroke-dasharray="4,3" />
+            <g font-family="Inter, Arial, sans-serif" font-size="11" font-style="italic" font-weight="bold" fill="#0f172a">
+              <text x="21" y="152">A</text><text x="128" y="154">B</text><text x="171" y="118">C</text><text x="64" y="113">D</text>
+              <text x="21" y="56">E</text><text x="114" y="50">F</text><text x="171" y="26">G</text><text x="65" y="23">H</text>
+            </g>
+          </svg>
+        `,
+        statements: [
+          `(1) Ruas garis <i>AC</i> dan <i>BD</i> merupakan diagonal bidang alas.`,
+          `(2) Ruas garis <i>AG</i> dan <i>BH</i> merupakan diagonal ruang kubus.`,
+          `(3) Ruas garis <i>AF</i> dan <i>CH</i> merupakan diagonal ruang kubus.`,
+          `(4) Rusuk <i>AE</i> sejajar dan sama panjang dengan rusuk <i>BC</i>.`
+        ],
+        questionPrompt: `Pernyataan yang <strong>benar</strong> adalah ....`,
+        options: { A: "(1) dan (2)", B: "(1) dan (3)", C: "(2) dan (4)", D: "(3) dan (4)" },
+        answer: "A",
+        explanation: `<i>AC</i> &amp; <i>BD</i> adalah diagonal bidang alas (1 benar); <i>AG</i> &amp; <i>BH</i> adalah diagonal ruang (2 benar); <i>AF</i> &amp; <i>CH</i> diagonal bidang; <i>AE</i> sejajar <i>BF, CG, DH</i>.`
+      },
+      {
+        no: 16,
+        type: "PGK",
+        topic: "Bangun Ruang Sisi Datar",
+        text: `Perhatikan pernyataan-pernyataan mengenai sifat prisma segi-<i>n</i> berikut:`,
+        statements: [
+          `(1) Memiliki sisi alas dan sisi tutup yang kongruen dan sejajar.`,
+          `(2) Banyaknya rusuk pada prisma segi-<i>n</i> adalah 3<i>n</i>.`,
+          `(3) Semua sisi tegaknya selalu berbentuk persegi panjang yang kongruen.`,
+          `(4) Banyaknya titik sudut pada prisma segi-<i>n</i> adalah <i>n</i> + 2.`
+        ],
+        questionPrompt: `Sifat-sifat yang dimiliki oleh setiap prisma segi-<i>n</i> ditunjukkan oleh nomor ....`,
+        options: { A: "(1) dan (2)", B: "(1) dan (3)", C: "(2) dan (4)", D: "(3) dan (4)" },
+        answer: "A",
+        explanation: `Prisma segi-<i>n</i> memiliki sisi alas &amp; tutup kongruen sejajar (1 benar) dan banyak rusuk 3<i>n</i> (2 benar).`
+      },
+      {
+        no: 17,
+        type: "PG",
+        topic: "Bangun Ruang Sisi Datar",
+        text: `Panjang rusuk sebuah kubus adalah 9 cm. Luas permukaan kubus tersebut adalah ....`,
+        options: { A: "81 cm<sup>2</sup>", B: "324 cm<sup>2</sup>", C: "486 cm<sup>2</sup>", D: "729 cm<sup>2</sup>" },
+        answer: "C",
+        explanation: `<i>L</i> = 6 &times; 9<sup>2</sup> = 6 &times; 81 = 486 cm<sup>2</sup>.`
+      },
+      {
+        no: 18,
+        type: "PG",
+        topic: "Bangun Ruang Sisi Datar",
+        text: `Sebuah balok memiliki ukuran panjang 15 cm, lebar 8 cm, dan tinggi 6 cm. Volume balok tersebut adalah ....`,
+        options: { A: "360 cm<sup>3</sup>", B: "596 cm<sup>3</sup>", C: "720 cm<sup>3</sup>", D: "840 cm<sup>3</sup>" },
+        answer: "C",
+        explanation: `<i>V</i> = 15 &times; 8 &times; 6 = 720 cm<sup>3</sup>.`
+      },
+      {
+        no: 19,
+        type: "PG",
+        topic: "Bangun Ruang Sisi Datar",
+        text: `Untuk membuat sebuah kerangka balok dibutuhkan kawat sepanjang 120 cm. Jika panjang balok 14 cm dan lebarnya 10 cm, maka luas permukaan balok tersebut adalah ....`,
+        options: { A: "284 cm<sup>2</sup>", B: "568 cm<sup>2</sup>", C: "840 cm<sup>2</sup>", D: "1.120 cm<sup>2</sup>" },
+        answer: "B",
+        explanation: `4(14 + 10 + <i>t</i>) = 120 &rarr; <i>t</i> = 6 cm. <i>L</i> = 2(140 + 84 + 60) = 568 cm<sup>2</sup>.`
+      },
+      {
+        no: 20,
+        type: "PG",
+        topic: "Bangun Ruang Sisi Datar",
+        text: `Perhatikan gambar prisma tegak dengan alas segitiga siku-siku berikut!`,
+        svg: `
+          <svg xmlns="http://www.w3.org/2000/svg" width="235" height="175" viewBox="0 0 230 170" class="border border-slate-200 rounded-xl bg-white p-1">
+            <polygon points="45,35 45,75 115,65" fill="none" stroke="#0f172a" stroke-width="1.6" />
+            <line x1="45" y1="75" x2="45" y2="145" stroke="#0f172a" stroke-width="1.6" />
+            <line x1="115" y1="65" x2="115" y2="135" stroke="#0f172a" stroke-width="1.6" />
+            <line x1="45" y1="35" x2="45" y2="105" stroke="#475569" stroke-width="1.3" stroke-dasharray="4,3" />
+            <polyline points="45,145 115,135" fill="none" stroke="#0f172a" stroke-width="1.6" />
+            <polyline points="45,105 45,145" fill="none" stroke="#475569" stroke-width="1.3" stroke-dasharray="4,3" />
+            <line x1="45" y1="105" x2="115" y2="135" stroke="#475569" stroke-width="1.3" stroke-dasharray="4,3" />
+            <polyline points="45,67 53,66 53,74" fill="none" stroke="#0f172a" stroke-width="1.2" />
+            <g font-family="Inter, Arial, sans-serif" font-size="11" fill="#0f172a" font-weight="600">
+              <text x="14" y="58">6 cm</text><text x="72" y="83">8 cm</text><text x="122" y="105">15 cm</text>
+            </g>
+          </svg>
+        `,
+        questionPrompt: `Volume prisma segitiga tersebut adalah ....`,
+        options: { A: "240 cm<sup>3</sup>", B: "360 cm<sup>3</sup>", C: "408 cm<sup>3</sup>", D: "720 cm<sup>3</sup>" },
+        answer: "B",
+        explanation: `<i>V</i> = (&frac12; &times; 6 &times; 8) &times; 15 = 24 &times; 15 = 360 cm<sup>3</sup>.`
+      },
+      {
+        no: 21,
+        type: "PG",
+        topic: "Bangun Ruang Sisi Datar",
+        text: `Sebuah limas segi empat beraturan memiliki alas berbentuk persegi dengan panjang rusuk 10 cm. Jika tinggi limas tersebut adalah 12 cm, maka luas permukaan limas adalah ....`,
+        options: { A: "260 cm<sup>2</sup>", B: "340 cm<sup>2</sup>", C: "360 cm<sup>2</sup>", D: "400 cm<sup>2</sup>" },
+        answer: "C",
+        explanation: `<i>t</i><sub>s</sub> = ${rad("12<sup>2</sup> + 5<sup>2</sup>")} = 13 cm. <i>L</i> = (10 &times; 10) + 4(&frac12; &times; 10 &times; 13) = 100 + 260 = 360 cm<sup>2</sup>.`
+      },
+      {
+        no: 22,
+        type: "PG",
+        topic: "Bangun Ruang Sisi Datar",
+        text: `Panitia kegiatan pramuka akan membuat atap tenda berbentuk limas segi empat beraturan tanpa alas dengan panjang rusuk alas 6 m dan tinggi atap 4 m. Jika harga kain terpal adalah Rp25.000,00 per m<sup>2</sup>, maka biaya minimal yang dibutuhkan untuk membeli kain terpal atap tenda tersebut adalah ....`,
+        options: { A: "Rp1.200.000,00", B: "Rp1.500.000,00", C: "Rp2.100.000,00", D: "Rp2.400.000,00" },
+        answer: "B",
+        explanation: `<i>t</i><sub>s</sub> = ${rad("3<sup>2</sup> + 4<sup>2</sup>")} = 5 m. <i>L</i><sub>selimut</sub> = 4(&frac12; &times; 6 &times; 5) = 60 m<sup>2</sup>. Biaya = 60 &times; Rp25.000,00 = Rp1.500.000,00.`
+      },
+      {
+        no: 23,
+        type: "PGK",
+        topic: "Bangun Ruang Sisi Datar",
+        text: `Diketahui dua buah limas beralas persegi dengan ukuran berbeda:<br/>&bull; Limas I memiliki panjang rusuk alas 6 cm dan tinggi 10 cm.<br/>&bull; Limas II memiliki panjang rusuk alas 12 cm dan tinggi 5 cm.<br/>Perhatikan pernyataan-pernyataan berikut:`,
+        statements: [
+          `(1) Volume Limas I adalah 120 cm<sup>3</sup>.`,
+          `(2) Volume Limas II sama dengan volume Limas I.`,
+          `(3) Perbandingan volume Limas I dan Limas II adalah 1 : 2.`,
+          `(4) Selisih volume kedua limas adalah 180 cm<sup>3</sup>.`
+        ],
+        questionPrompt: `Pernyataan yang <strong>benar</strong> adalah ....`,
+        options: { A: "(1) dan (2)", B: "(1) dan (3)", C: "(2) dan (4)", D: "(3) dan (4)" },
+        answer: "B",
+        explanation: `<i>V</i><sub>I</sub> = &frac13; &times; 36 &times; 10 = 120 cm<sup>3</sup> (1 benar); <i>V</i><sub>II</sub> = &frac13; &times; 144 &times; 5 = 240 cm<sup>3</sup>. Perbandingan <i>V</i><sub>I</sub> : <i>V</i><sub>II</sub> = 120 : 240 = 1 : 2 (3 benar).`
+      },
+      {
+        no: 24,
+        type: "PGK",
+        topic: "Bangun Ruang Sisi Datar",
+        text: `Perhatikan gambar bangun ruang gabungan kubus dan limas segi empat beraturan berikut!`,
+        svg: `
+          <svg xmlns="http://www.w3.org/2000/svg" width="235" height="200" viewBox="0 0 230 195" class="border border-slate-200 rounded-xl bg-white p-1">
+            <rect x="40" y="90" width="80" height="80" fill="none" stroke="#0f172a" stroke-width="1.6" />
+            <polyline points="120,90 150,68 150,148 120,170" fill="none" stroke="#0f172a" stroke-width="1.6" />
+            <polyline points="40,90 70,68 150,68" fill="none" stroke="#0f172a" stroke-width="1.4" />
+            <polyline points="70,68 70,148 150,148" fill="none" stroke="#475569" stroke-width="1.2" stroke-dasharray="4,3" />
+            <line x1="40" y1="170" x2="70" y2="148" stroke="#475569" stroke-width="1.2" stroke-dasharray="4,3" />
+            <line x1="95" y1="20" x2="40" y2="90" stroke="#0f172a" stroke-width="1.6" />
+            <line x1="95" y1="20" x2="120" y2="90" stroke="#0f172a" stroke-width="1.6" />
+            <line x1="95" y1="20" x2="150" y2="68" stroke="#0f172a" stroke-width="1.6" />
+            <line x1="95" y1="20" x2="70" y2="68" stroke="#475569" stroke-width="1.2" stroke-dasharray="4,3" />
+            <line x1="162" y1="20" x2="174" y2="20" stroke="#0f172a" stroke-width="1" />
+            <line x1="162" y1="170" x2="174" y2="170" stroke="#0f172a" stroke-width="1" />
+            <line x1="168" y1="20" x2="168" y2="170" stroke="#0f172a" stroke-width="1" />
+            <g font-family="Inter, Arial, sans-serif" font-size="11" fill="#0f172a" font-weight="600">
+              <text x="65" y="184">12 cm</text><text x="174" y="100">20 cm</text>
+            </g>
+          </svg>
+        `,
+        statements: [
+          `(1) Tinggi sisi tegak limas adalah 10 cm.`,
+          `(2) Luas permukaan bangun gabungan tersebut adalah 1.104 cm<sup>2</sup>.`,
+          `(3) Volume bangun gabungan tersebut adalah 2.112 cm<sup>3</sup>.`,
+          `(4) Volume limas lebih besar daripada seperempat volume kubus.`
+        ],
+        questionPrompt: `Jika panjang rusuk kubus 12 cm dan tinggi seluruh bangun 20 cm, pernyataan yang <strong>benar</strong> adalah ....`,
+        options: { A: "(1) dan (2)", B: "(1) dan (3)", C: "(2) dan (4)", D: "(3) dan (4)" },
+        answer: "B",
+        explanation: `<i>t</i><sub>limas</sub> = 8 cm &rarr; <i>t</i><sub>s</sub> = ${rad("8<sup>2</sup> + 6<sup>2</sup>")} = 10 cm (1 benar). <i>V</i><sub>gabungan</sub> = 12<sup>3</sup> + &frac13;(144)(8) = 1.728 + 384 = 2.112 cm<sup>3</sup> (3 benar).`
+      },
+      {
+        no: 25,
+        type: "PG",
+        topic: "Bangun Ruang Sisi Datar",
+        text: `Perhatikan gambar kolam renang berbentuk prisma dengan alas trapesium siku-siku berikut!`,
+        svg: `
+          <svg xmlns="http://www.w3.org/2000/svg" width="280" height="155" viewBox="0 0 275 150" class="border border-slate-200 rounded-xl bg-white p-1">
+            <polygon points="28,60 165,60 165,130 28,88" fill="#bae6fd" fill-opacity="0.55" stroke="#0f172a" stroke-width="1.6" />
+            <polyline points="28,60 93,30 230,30 230,100 165,130" fill="none" stroke="#0f172a" stroke-width="1.6" />
+            <line x1="165" y1="60" x2="230" y2="30" stroke="#0f172a" stroke-width="1.6" />
+            <polyline points="93,30 93,58 230,100" fill="none" stroke="#475569" stroke-width="1.2" stroke-dasharray="4,3" />
+            <line x1="28" y1="88" x2="93" y2="58" stroke="#475569" stroke-width="1.2" stroke-dasharray="4,3" />
+            <polyline points="28,67 35,67 35,60" fill="none" stroke="#0f172a" stroke-width="1" />
+            <polyline points="158,60 158,67 165,67" fill="none" stroke="#0f172a" stroke-width="1" />
+            <g font-family="Inter, Arial, sans-serif" font-size="11" fill="#0f172a" font-weight="600">
+              <text x="85" y="55">20 m</text><text x="4" y="78">1 m</text><text x="171" y="100">3 m</text><text x="206" y="122">8 m</text>
+            </g>
+          </svg>
+        `,
+        questionPrompt: `Kapasitas air maksimal yang dapat ditampung kolam renang tersebut adalah ....`,
+        options: { A: "160 m<sup>3</sup>", B: "240 m<sup>3</sup>", C: "320 m<sup>3</sup>", D: "480 m<sup>3</sup>" },
+        answer: "C",
+        explanation: `<i>L</i><sub>alas trapesium</sub> = &frac12; &times; (1 + 3) &times; 20 = 40 m<sup>2</sup>. <i>V</i> = 40 &times; 8 = 320 m<sup>3</sup>.`
+      },
+      {
+        no: 26,
+        type: "PG",
+        topic: "Bangun Ruang Sisi Datar",
+        text: `Diketahui luas permukaan sebuah kubus adalah 294 cm<sup>2</sup>. Panjang diagonal ruang kubus tersebut adalah ....`,
+        options: {
+          A: "7 cm",
+          B: `7${rad("2")} cm`,
+          C: `7${rad("3")} cm`,
+          D: `14${rad("3")} cm`
+        },
+        answer: "C",
+        explanation: `6<i>s</i><sup>2</sup> = 294 &rarr; <i>s</i><sup>2</sup> = 49 &rarr; <i>s</i> = 7 cm. Diagonal ruang = <i>s</i>${rad("3")} = 7${rad("3")} cm.`
+      },
+      {
+        no: 27,
+        type: "PG",
+        topic: "Bangun Ruang Sisi Datar",
+        text: `Sebuah balok memiliki ukuran panjang 10 cm, lebar 6 cm, dan tinggi 5 cm. Jika panjangnya diperbesar 2 kali lipat, lebarnya diperbesar 1,5 kali lipat, dan tingginya diperkecil menjadi setengahnya, maka selisih volume balok sebelum dan sesudah perubahan adalah ....`,
+        options: { A: "100 cm<sup>3</sup>", B: "150 cm<sup>3</sup>", C: "200 cm<sup>3</sup>", D: "450 cm<sup>3</sup>" },
+        answer: "B",
+        explanation: `<i>V</i><sub>awal</sub> = 10 &times; 6 &times; 5 = 300 cm<sup>3</sup>. <i>V</i><sub>akhir</sub> = 20 &times; 9 &times; 2,5 = 450 cm<sup>3</sup>. Selisih = 450 &minus; 300 = 150 cm<sup>3</sup>.`
+      },
+
+      // === MATERI 3: BANGUN RUANG SISI LENGKUNG (NO. 28 - 40) ===
+      {
+        no: 28,
+        type: "PG",
+        topic: "Bangun Ruang Sisi Lengkung",
+        text: `Perhatikan gambar kerucut berikut!`,
+        svg: `
+          <svg xmlns="http://www.w3.org/2000/svg" width="215" height="175" viewBox="0 0 210 175" class="border border-slate-200 rounded-xl bg-white p-1">
+            <line x1="95" y1="22" x2="35" y2="140" stroke="#0f172a" stroke-width="1.6" />
+            <line x1="95" y1="22" x2="155" y2="140" stroke="#0f172a" stroke-width="1.6" />
+            <path d="M 35 140 A 60 16 0 0 0 155 140" fill="none" stroke="#0f172a" stroke-width="1.6" />
+            <path d="M 35 140 A 60 16 0 0 1 155 140" fill="none" stroke="#475569" stroke-width="1.2" stroke-dasharray="4,3" />
+            <line x1="95" y1="22" x2="95" y2="140" stroke="#475569" stroke-width="1.3" stroke-dasharray="4,3" />
+            <line x1="35" y1="140" x2="155" y2="140" stroke="#475569" stroke-width="1.3" stroke-dasharray="4,3" />
+            <polyline points="95,132 103,132 103,140" fill="none" stroke="#0f172a" stroke-width="1.1" />
+            <circle cx="95" cy="140" r="2.5" fill="#0f172a" />
+            <g font-family="Inter, Arial, sans-serif" font-size="11" font-style="italic" font-weight="bold" fill="#0f172a">
+              <text x="91" y="16">T</text><text x="21" y="144">A</text><text x="159" y="144">B</text><text x="90" y="154">O</text>
+            </g>
+          </svg>
+        `,
+        questionPrompt: `Ruas garis yang merupakan <strong>garis pelukis</strong> kerucut adalah ....`,
+        options: { A: "<i>OA</i>", B: "<i>AB</i>", C: "<i>TO</i>", D: "<i>TB</i>" },
+        answer: "D",
+        explanation: `<i>OA</i> = jari-jari, <i>AB</i> = diameter, <i>TO</i> = tinggi kerucut, <i>TB</i> = garis pelukis.`
+      },
+      {
+        no: 29,
+        type: "PG",
+        topic: "Bangun Ruang Sisi Lengkung",
+        text: `Sebuah tabung memiliki jari-jari alas 14 cm dan tinggi 10 cm. Luas selimut tabung tersebut adalah .... (&pi; = ${frac("22", "7")})`,
+        options: { A: "440 cm<sup>2</sup>", B: "616 cm<sup>2</sup>", C: "880 cm<sup>2</sup>", D: "2.112 cm<sup>2</sup>" },
+        answer: "C",
+        explanation: `<i>L</i><sub>selimut</sub> = 2 &times; ${frac("22", "7")} &times; 14 &times; 10 = 880 cm<sup>2</sup>.`
+      },
+      {
+        no: 30,
+        type: "PG",
+        topic: "Bangun Ruang Sisi Lengkung",
+        text: `Sebuah drum berbentuk tabung memiliki diameter alas 70 cm dan tinggi 100 cm. Volume maksimal drum tersebut dalam satuan liter adalah .... (&pi; = ${frac("22", "7")})`,
+        options: { A: "220 liter", B: "385 liter", C: "770 liter", D: "1.540 liter" },
+        answer: "B",
+        explanation: `<i>r</i> = 35 cm. <i>V</i> = ${frac("22", "7")} &times; 35 &times; 35 &times; 100 = 385.000 cm<sup>3</sup> = 385 liter.`
+      },
+      {
+        no: 31,
+        type: "PGK",
+        topic: "Bangun Ruang Sisi Lengkung",
+        text: `Diketahui sebuah kerucut memiliki panjang jari-jari alas 7 cm dan tinggi 24 cm (&pi; = ${frac("22", "7")}). Perhatikan pernyataan-pernyataan berikut:`,
+        statements: [
+          `(1) Panjang garis pelukis kerucut tersebut adalah 25 cm.`,
+          `(2) Luas selimut kerucut tersebut adalah 528 cm<sup>2</sup>.`,
+          `(3) Luas permukaan kerucut tersebut adalah 704 cm<sup>2</sup>.`,
+          `(4) Luas alas kerucut lebih besar daripada sepertiga luas selimutnya.`
+        ],
+        questionPrompt: `Pernyataan yang <strong>benar</strong> ditunjukkan oleh nomor ....`,
+        options: { A: "(1) dan (2)", B: "(1) dan (3)", C: "(2) dan (4)", D: "(3) dan (4)" },
+        answer: "B",
+        explanation: `<i>s</i> = ${rad("7<sup>2</sup> + 24<sup>2</sup>")} = 25 cm (1 benar). <i>L</i><sub>selimut</sub> = 550 cm<sup>2</sup>; <i>L</i><sub>permukaan</sub> = ${frac("22", "7")} &times; 7 &times; (7 + 25) = 704 cm<sup>2</sup> (3 benar).`
+      },
+      {
+        no: 32,
+        type: "PGK",
+        topic: "Bangun Ruang Sisi Lengkung",
+        text: `Selembar karton berbentuk juring lingkaran dengan jari-jari 8 cm dan luas 48&pi; cm<sup>2</sup> (setara dengan ${frac("3", "4")} bagian dari luas lingkaran penuh) seperti tampak pada gambar akan dibentuk menjadi selimut kerucut.`,
+        svg: `
+          <svg xmlns="http://www.w3.org/2000/svg" width="215" height="165" viewBox="0 0 210 165" class="border border-slate-200 rounded-xl bg-white p-1">
+            <path d="M 105 82 L 165 82 A 60 60 0 1 1 105 22 Z" fill="#fef3c7" fill-opacity="0.85" stroke="#0f172a" stroke-width="1.6" />
+            <g font-family="Inter, Arial, sans-serif" font-size="11" fill="#0f172a">
+              <text x="122" y="76" font-weight="600">8 cm</text>
+              <text x="58" y="112" font-weight="700">Luas = 48&pi; cm&sup2;</text>
+            </g>
+          </svg>
+        `,
+        statements: [
+          `(1) Panjang jari-jari alas kerucut yang terbentuk adalah 6 cm.`,
+          `(2) Tinggi kerucut yang terbentuk adalah 2${rad("7")} cm.`,
+          `(3) Volume kerucut yang terbentuk adalah 72${rad("7")}&pi; cm<sup>3</sup>.`,
+          `(4) Panjang jari-jari alas kerucut yang terbentuk adalah 4 cm.`
+        ],
+        questionPrompt: `Dengan membandingkan luas juring terhadap luas lingkaran penuh, pernyataan yang <strong>benar</strong> adalah ....`,
+        options: { A: "(1) dan (2)", B: "(1) dan (3)", C: "(2) dan (4)", D: "(3) dan (4)" },
+        answer: "A",
+        explanation: `Luas lingkaran penuh = &pi;(8<sup>2</sup>) = 64&pi; cm<sup>2</sup>. Perbandingan ${frac("<i>L</i><sub>juring</sub>", "<i>L</i><sub>lingkaran</sub>")} = ${frac("48&pi;", "64&pi;")} = ${frac("3", "4")}. Dengan <i>s</i> = 8 cm, diperoleh ${frac("<i>r</i>", "8")} = ${frac("3", "4")} &rarr; <i>r</i> = 6 cm (1 benar). Tinggi <i>t</i> = ${rad("8<sup>2</sup> &minus; 6<sup>2</sup>")} = ${rad("28")} = 2${rad("7")} cm (2 benar).`
+      },
+      {
+        no: 33,
+        type: "PG",
+        topic: "Bangun Ruang Sisi Lengkung",
+        text: `Panjang jari-jari sebuah bola adalah 7 cm. Luas permukaan bola tersebut adalah .... (&pi; = ${frac("22", "7")})`,
+        options: { A: "154 cm<sup>2</sup>", B: "308 cm<sup>2</sup>", C: "616 cm<sup>2</sup>", D: "1.437,33 cm<sup>2</sup>" },
+        answer: "C",
+        explanation: `<i>L</i> = 4 &times; ${frac("22", "7")} &times; 7 &times; 7 = 616 cm<sup>2</sup>.`
+      },
+      {
+        no: 34,
+        type: "PG",
+        topic: "Bangun Ruang Sisi Lengkung",
+        text: `Keliling alas sebuah kerucut adalah 62,8 cm dan panjang garis pelukisnya 26 cm. Volume kerucut tersebut adalah .... (&pi; = 3,14)`,
+        options: { A: "2.512 cm<sup>3</sup>", B: "2.721,3 cm<sup>3</sup>", C: "5.024 cm<sup>3</sup>", D: "7.536 cm<sup>3</sup>" },
+        answer: "A",
+        explanation: `2(3,14)<i>r</i> = 62,8 &rarr; <i>r</i> = 10 cm. <i>t</i> = ${rad("26<sup>2</sup> &minus; 10<sup>2</sup>")} = 24 cm. <i>V</i> = &frac13; &times; 3,14 &times; 100 &times; 24 = 2.512 cm<sup>3</sup>.`
+      },
+      {
+        no: 35,
+        type: "PG",
+        topic: "Bangun Ruang Sisi Lengkung",
+        text: `Sebuah benda berbentuk belahan bola padat (pejal) memiliki diameter 20 cm. Luas permukaan benda tersebut adalah .... (&pi; = 3,14)`,
+        options: { A: "314 cm<sup>2</sup>", B: "628 cm<sup>2</sup>", C: "942 cm<sup>2</sup>", D: "1.256 cm<sup>2</sup>" },
+        answer: "C",
+        explanation: `<i>r</i> = 10 cm. <i>L</i><sub>belahan bola padat</sub> = 3&pi;<i>r</i><sup>2</sup> = 3 &times; 3,14 &times; 100 = 942 cm<sup>2</sup>.`
+      },
+      {
+        no: 36,
+        type: "PG",
+        topic: "Bangun Ruang Sisi Lengkung",
+        text: `Jika luas permukaan sebuah bola adalah 144&pi; cm<sup>2</sup>, maka volume bola tersebut adalah ....`,
+        options: { A: "108&pi; cm<sup>3</sup>", B: "216&pi; cm<sup>3</sup>", C: "288&pi; cm<sup>3</sup>", D: "864&pi; cm<sup>3</sup>" },
+        answer: "C",
+        explanation: `4&pi;<i>r</i><sup>2</sup> = 144&pi; &rarr; <i>r</i> = 6 cm. <i>V</i> = &frac43;&pi;(6<sup>3</sup>) = 288&pi; cm<sup>3</sup>.`
+      },
+      {
+        no: 37,
+        type: "PG",
+        topic: "Bangun Ruang Sisi Lengkung",
+        text: `Perhatikan gambar sebuah bola yang berada di dalam tabung dan tepat menyinggung sisi alas, sisi tutup, serta selimut tabung berikut!`,
+        svg: `
+          <svg xmlns="http://www.w3.org/2000/svg" width="185" height="175" viewBox="0 0 180 175" class="border border-slate-200 rounded-xl bg-white p-1">
+            <ellipse cx="90" cy="25" rx="55" ry="13" fill="none" stroke="#0f172a" stroke-width="1.5" />
+            <line x1="35" y1="25" x2="35" y2="135" stroke="#0f172a" stroke-width="1.6" />
+            <line x1="145" y1="25" x2="145" y2="135" stroke="#0f172a" stroke-width="1.6" />
+            <path d="M 35 135 A 55 13 0 0 0 145 135" fill="none" stroke="#0f172a" stroke-width="1.6" />
+            <path d="M 35 135 A 55 13 0 0 1 145 135" fill="none" stroke="#475569" stroke-width="1.2" stroke-dasharray="4,3" />
+            <circle cx="90" cy="80" r="55" fill="#dbeafe" fill-opacity="0.55" stroke="#0f172a" stroke-width="1.6" />
+            <path d="M 35 80 A 55 12 0 0 0 145 80" fill="none" stroke="#475569" stroke-width="1.1" stroke-dasharray="3,2" />
+            <path d="M 35 80 A 55 12 0 0 1 145 80" fill="none" stroke="#475569" stroke-width="1.1" stroke-dasharray="3,2" />
+          </svg>
+        `,
+        questionPrompt: `Perbandingan volume ruang kosong di dalam tabung (di luar bola) terhadap volume tabung adalah ....`,
+        options: { A: "1 : 2", B: "1 : 3", C: "2 : 3", D: "3 : 4" },
+        answer: "B",
+        explanation: `<i>t</i><sub>tabung</sub> = 2<i>r</i>. <i>V</i><sub>tabung</sub> = 2&pi;<i>r</i><sup>3</sup>; <i>V</i><sub>bola</sub> = &frac43;&pi;<i>r</i><sup>3</sup>. <i>V</i><sub>kosong</sub> = &frac23;&pi;<i>r</i><sup>3</sup>. Perbandingan = &frac23;&pi;<i>r</i><sup>3</sup> : 2&pi;<i>r</i><sup>3</sup> = 1 : 3.`
+      },
+      {
+        no: 38,
+        type: "PG",
+        topic: "Bangun Ruang Sisi Lengkung",
+        text: `Perhatikan ilustrasi wadah tabung berdiameter 28 cm yang berisi air, lalu ke dalamnya dimasukkan 3 buah bola besi pejal berjari-jari 7 cm hingga seluruh bola tenggelam sempurna!`,
+        svg: `
+          <svg xmlns="http://www.w3.org/2000/svg" width="280" height="175" viewBox="0 0 275 170" class="border border-slate-200 rounded-xl bg-white p-1">
+            <ellipse cx="80" cy="22" rx="50" ry="11" fill="none" stroke="#0f172a" stroke-width="1.5" />
+            <path d="M 30 82 L 30 152 A 50 11 0 0 0 130 152 L 130 82 A 50 11 0 0 1 30 82 Z" fill="#e0f2fe" stroke="none" />
+            <ellipse cx="80" cy="82" rx="50" ry="11" fill="#bae6fd" stroke="#0f172a" stroke-width="1.2" />
+            <line x1="30" y1="22" x2="30" y2="152" stroke="#0f172a" stroke-width="1.6" />
+            <line x1="130" y1="22" x2="130" y2="152" stroke="#0f172a" stroke-width="1.6" />
+            <path d="M 30 152 A 50 11 0 0 0 130 152" fill="none" stroke="#0f172a" stroke-width="1.6" />
+            <line x1="30" y1="22" x2="130" y2="22" stroke="#475569" stroke-width="1" stroke-dasharray="3,2" />
+            <circle cx="185" cy="132" r="18" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.4" />
+            <line x1="185" y1="132" x2="203" y2="132" stroke="#0f172a" stroke-width="1" stroke-dasharray="2,2" />
+            <circle cx="232" cy="132" r="18" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.4" />
+            <circle cx="208" cy="99" r="18" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.4" />
+            <g font-family="Inter, Arial, sans-serif" font-size="10.5" fill="#0f172a" font-weight="600">
+              <text x="64" y="17">28 cm</text><text x="186" y="129" font-size="9">7 cm</text><text x="172" y="164">3 Bola Besi (<i>r</i> = 7 cm)</text>
+            </g>
+          </svg>
+        `,
+        questionPrompt: `Jika air di dalam tabung tidak tumpah, maka kenaikan tinggi air di dalam tabung adalah ....`,
+        options: { A: "3,5 cm", B: "5,25 cm", C: "7 cm", D: "14 cm" },
+        answer: "C",
+        explanation: `&pi;<i>R</i><sup>2</sup>&Delta;<i>t</i> = 3 &times; &frac43;&pi;<i>r</i><sup>3</sup> &rarr; 14<sup>2</sup> &times; &Delta;<i>t</i> = 4 &times; 7<sup>3</sup> &rarr; 196&Delta;<i>t</i> = 1.372 &rarr; &Delta;<i>t</i> = 7 cm.`
+      },
+      {
+        no: 39,
+        type: "PGK",
+        topic: "Bangun Ruang Sisi Lengkung",
+        text: `Perhatikan gambar menara yang terdiri atas gabungan tabung dan kerucut berikut!`,
+        svg: `
+          <svg xmlns="http://www.w3.org/2000/svg" width="240" height="200" viewBox="0 0 235 200" class="border border-slate-200 rounded-xl bg-white p-1">
+            <line x1="92" y1="18" x2="48" y2="98" stroke="#0f172a" stroke-width="1.6" />
+            <line x1="92" y1="18" x2="136" y2="98" stroke="#0f172a" stroke-width="1.6" />
+            <path d="M 48 98 A 44 12 0 0 0 136 98" fill="none" stroke="#0f172a" stroke-width="1.4" />
+            <path d="M 48 98 A 44 12 0 0 1 136 98" fill="none" stroke="#475569" stroke-width="1.2" stroke-dasharray="4,3" />
+            <line x1="48" y1="98" x2="48" y2="170" stroke="#0f172a" stroke-width="1.6" />
+            <line x1="136" y1="98" x2="136" y2="170" stroke="#0f172a" stroke-width="1.6" />
+            <path d="M 48 170 A 44 12 0 0 0 136 170" fill="none" stroke="#0f172a" stroke-width="1.6" />
+            <path d="M 48 170 A 44 12 0 0 1 136 170" fill="none" stroke="#475569" stroke-width="1.2" stroke-dasharray="4,3" />
+            <line x1="92" y1="170" x2="136" y2="170" stroke="#475569" stroke-width="1.2" stroke-dasharray="3,2" />
+            <line x1="146" y1="98" x2="156" y2="98" stroke="#0f172a" stroke-width="1" />
+            <line x1="146" y1="170" x2="156" y2="170" stroke="#0f172a" stroke-width="1" />
+            <line x1="151" y1="98" x2="151" y2="170" stroke="#0f172a" stroke-width="1" />
+            <line x1="26" y1="18" x2="36" y2="18" stroke="#0f172a" stroke-width="1" />
+            <line x1="26" y1="170" x2="36" y2="170" stroke="#0f172a" stroke-width="1" />
+            <line x1="31" y1="18" x2="31" y2="170" stroke="#0f172a" stroke-width="1" />
+            <g font-family="Inter, Arial, sans-serif" font-size="11" fill="#0f172a" font-weight="600">
+              <text x="103" y="165">7 cm</text><text x="156" y="138">10 cm</text><text x="1" y="98">34 cm</text>
+            </g>
+          </svg>
+        `,
+        statements: [
+          `(1) Luas permukaan bangun gabungan tersebut adalah 1.144 cm<sup>2</sup>.`,
+          `(2) Luas permukaan bangun gabungan tersebut adalah 1.298 cm<sup>2</sup>.`,
+          `(3) Volume bangun gabungan tersebut adalah 2.772 cm<sup>3</sup>.`,
+          `(4) Volume bagian kerucut lebih besar daripada volume bagian tabung.`
+        ],
+        questionPrompt: `Diketahui jari-jari alas tabung 7 cm, tinggi tabung 10 cm, dan tinggi keseluruhan menara 34 cm (&pi; = ${frac("22", "7")}). Pernyataan yang <strong>benar</strong> adalah ....`,
+        options: { A: "(1) dan (2)", B: "(1) dan (3)", C: "(2) dan (4)", D: "(3) dan (4)" },
+        answer: "B",
+        explanation: `<i>t</i><sub>kerucut</sub> = 24 cm, <i>s</i> = 25 cm. <i>L</i><sub>permukaan</sub> = &pi;<i>r</i><sup>2</sup> + 2&pi;<i>rt</i><sub>1</sub> + &pi;<i>rs</i> = 154 + 440 + 550 = 1.144 cm<sup>2</sup> (1 benar). <i>V</i> = 1.540 + 1.232 = 2.772 cm<sup>3</sup> (3 benar).`
+      },
+      {
+        no: 40,
+        type: "PGK",
+        topic: "Bangun Ruang Sisi Lengkung",
+        text: `Sebuah tangki penyimpanan air terbuat dari pelat baja tertutup berbentuk gabungan tabung di bagian bawah dan setengah bola di bagian atas dengan jari-jari sama, yaitu <i>r</i> = 7 dm seperti tampak pada gambar.`,
+        svg: `
+          <svg xmlns="http://www.w3.org/2000/svg" width="215" height="190" viewBox="0 0 210 190" class="border border-slate-200 rounded-xl bg-white p-1">
+            <path d="M 47 65 A 48 48 0 0 1 143 65" fill="none" stroke="#0f172a" stroke-width="1.6" />
+            <path d="M 47 65 A 48 12 0 0 0 143 65" fill="none" stroke="#0f172a" stroke-width="1.3" />
+            <path d="M 47 65 A 48 12 0 0 1 143 65" fill="none" stroke="#475569" stroke-width="1.2" stroke-dasharray="4,3" />
+            <line x1="47" y1="65" x2="47" y2="160" stroke="#0f172a" stroke-width="1.6" />
+            <line x1="143" y1="65" x2="143" y2="160" stroke="#0f172a" stroke-width="1.6" />
+            <path d="M 47 160 A 48 12 0 0 0 143 160" fill="none" stroke="#0f172a" stroke-width="1.6" />
+            <path d="M 47 160 A 48 12 0 0 1 143 160" fill="none" stroke="#475569" stroke-width="1.2" stroke-dasharray="4,3" />
+            <line x1="95" y1="65" x2="143" y2="65" stroke="#475569" stroke-width="1.2" stroke-dasharray="3,2" />
+            <g font-family="Inter, Arial, sans-serif" font-size="11" fill="#0f172a" font-weight="600">
+              <text x="108" y="60">7 dm</text>
+            </g>
+          </svg>
+        `,
+        statements: [
+          `(1) Tinggi keseluruhan tangki tersebut adalah 17 dm.`,
+          `(2) Luas bahan pelat baja minimal untuk membuat tangki tertutup tersebut adalah 902 dm<sup>2</sup>.`,
+          `(3) Sisa volume ruang kosong di dalam tangki saat ini adalah 818${frac("2", "3")} liter.`,
+          `(4) Tinggi bagian tabung saja adalah 12 dm.`
+        ],
+        questionPrompt: `Diketahui kapasitas maksimal seluruh tangki adalah 2.258${frac("2", "3")} liter (1 liter = 1 dm<sup>3</sup>) dan saat ini tangki terisi air sebanyak 1.540 liter (&pi; = ${frac("22", "7")}). Pernyataan yang bernilai <strong>benar</strong> adalah ....`,
+        options: { A: "(1) dan (2)", B: "(1) dan (3)", C: "(2) dan (4)", D: "(3) dan (4)" },
+        answer: "A",
+        explanation: `<i>V</i><sub>setengah bola</sub> = &frac23; &times; ${frac("22", "7")} &times; 343 = 718${frac("2", "3")} liter. <i>V</i><sub>tabung</sub> = 2.258${frac("2", "3")} &minus; 718${frac("2", "3")} = 1.540 liter &rarr; <i>t</i><sub>tabung</sub> = 10 dm. Tinggi total = 10 + 7 = 17 dm (1 benar). Luas pelat tertutup = 3&pi;<i>r</i><sup>2</sup> + 2&pi;<i>rt</i> = 462 + 440 = 902 dm<sup>2</sup> (2 benar).`
+      }
+    ];
+
+    // State Ujian CBT
+    const TOTAL_SECONDS = 120 * 60; // 120 Menit
+    let currentIndex = 0;
+    let userAnswers = new Array(QUESTIONS.length).fill(null);
+    let doubtfulFlags = new Array(QUESTIONS.length).fill(false);
+    let remainingSeconds = TOTAL_SECONDS;
+    let timerInterval = null;
+    let currentFontSize = 16;
+    let studentData = { nama: "", nis: "", kelas: "" };
+
+    // 1. Login & Mulai Ujian
+    function handleStartExam(e) {
+      e.preventDefault();
+      const nama = document.getElementById("input-nama").value.trim();
+      const nis = document.getElementById("input-nis").value.trim();
+      const kelas = document.getElementById("input-kelas").value;
+      const token = document.getElementById("input-token").value.trim().toUpperCase();
+      const errEl = document.getElementById("login-error");
+
+      if (!nama || !nis) {
+        errEl.textContent = "Harap lengkapi Nama Lengkap dan Nomor Peserta terlebih dahulu.";
+        errEl.classList.remove("hidden");
+        return;
+      }
+      if (token !== "ASAS2026") {
+        errEl.textContent = "Token ujian tidak valid! Gunakan token: ASAS2026";
+        errEl.classList.remove("hidden");
+        return;
+      }
+
+      errEl.classList.add("hidden");
+      studentData = { nama, nis, kelas };
+      document.getElementById("header-student-info").textContent = `${nama} (${nis}) • Kelas ${kelas}`;
+
+      document.getElementById("screen-login").classList.add("hidden");
+      document.getElementById("screen-exam").classList.remove("hidden");
+
+      currentIndex = 0;
+      renderQuestion();
+      renderNavGrids();
+      startTimer();
+    }
+
+    // 2. Timer Hitung Mundur
+    function startTimer() {
+      clearInterval(timerInterval);
+      updateTimerDisplay();
+      timerInterval = setInterval(() => {
+        remainingSeconds--;
+        updateTimerDisplay();
+        if (remainingSeconds <= 0) {
+          clearInterval(timerInterval);
+          submitExam();
+        }
+      }, 1000);
+    }
+
+    function updateTimerDisplay() {
+      const hrs = Math.floor(remainingSeconds / 3600);
+      const mins = Math.floor((remainingSeconds % 3600) / 60);
+      const secs = remainingSeconds % 60;
+      const formatted = [hrs, mins, secs].map(v => String(v).padStart(2, "0")).join(":");
+      const displayEl = document.getElementById("timer-display");
+      displayEl.textContent = formatted;
+
+      if (remainingSeconds <= 300) {
+        displayEl.classList.remove("text-emerald-400");
+        displayEl.classList.add("text-rose-400", "animate-pulse");
+      } else {
+        displayEl.classList.add("text-emerald-400");
+        displayEl.classList.remove("text-rose-400", "animate-pulse");
+      }
+    }
+
+    // 3. Pengaturan Ukuran Teks
+    function changeFontSize(delta) {
+      if (delta === 0) {
+        currentFontSize = 16;
+      } else {
+        currentFontSize = Math.min(21, Math.max(14, currentFontSize + delta));
+      }
+      document.getElementById("question-content-area").style.fontSize = `${currentFontSize}px`;
+    }
+
+    // 4. Render Soal Aktif
+    function renderQuestion() {
+      const q = QUESTIONS[currentIndex];
+      document.getElementById("q-number-label").textContent = q.no;
+      document.getElementById("q-topic-label").textContent = q.topic;
+
+      const badgeEl = document.getElementById("q-type-badge");
+      if (q.type === "PGK") {
+        badgeEl.textContent = "Pilihan Ganda Kompleks (PGK)";
+        badgeEl.className = "px-2.5 py-1 rounded-lg bg-purple-50 text-purple-700 border border-purple-200 font-semibold text-xs";
+      } else {
+        badgeEl.textContent = "Pilihan Ganda (PG)";
+        badgeEl.className = "px-2.5 py-1 rounded-lg bg-blue-50 text-blue-700 border border-blue-200 font-semibold text-xs";
+      }
+
+      let html = `<div class="space-y-4">`;
+      html += `<div class="text-slate-900">${q.text}</div>`;
+
+      if (q.svg) {
+        html += `<div class="my-3 flex justify-start">${q.svg}</div>`;
+      }
+
+      if (q.tableHtml) {
+        html += q.tableHtml;
+      }
+
+      if (q.statements) {
+        html += `<div class="bg-slate-50 border border-slate-200 rounded-xl p-3.5 sm:p-4 space-y-2 text-[0.95em]">`;
+        q.statements.forEach(st => {
+          html += `<div class="leading-snug">${st}</div>`;
+        });
+        html += `</div>`;
+      }
+
+      if (q.questionPrompt) {
+        html += `<div class="text-slate-900">${q.questionPrompt}</div>`;
+      }
+
+      // Pilihan Jawaban A, B, C, D
+      html += `<div class="pt-2 space-y-2.5">`;
+      ["A", "B", "C", "D"].forEach(optKey => {
+        const isSelected = userAnswers[currentIndex] === optKey;
+        const containerClass = isSelected
+          ? "border-blue-600 bg-blue-50/90 ring-2 ring-blue-600/20"
+          : "border-slate-200 bg-white hover:bg-slate-50 hover:border-slate-300";
+        const circleClass = isSelected
+          ? "bg-blue-600 text-white border-blue-600"
+          : "bg-slate-100 text-slate-700 border-slate-300";
+
+        html += `
+          <button
+            type="button"
+            onclick="selectOption('${optKey}')"
+            class="w-full text-left p-3.5 sm:p-4 rounded-xl border ${containerClass} transition flex items-center gap-3.5 cursor-pointer"
+          >
+            <span class="w-8 h-8 rounded-full border ${circleClass} font-bold text-sm flex items-center justify-center shrink-0">
+              ${optKey}
+            </span>
+            <span class="flex-1 text-slate-800">${q.options[optKey]}</span>
+          </button>
+        `;
+      });
+      html += `</div></div>`;
+
+      document.getElementById("question-content-area").innerHTML = html;
+
+      // Update Tombol Navigasi Bawah
+      document.getElementById("btn-prev").disabled = currentIndex === 0;
+      const nextBtn = document.getElementById("btn-next");
+      if (currentIndex === QUESTIONS.length - 1) {
+        nextBtn.innerHTML = `Selesai Ujian &check;`;
+        nextBtn.className = "px-4 sm:px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm shadow-sm transition cursor-pointer";
+        nextBtn.onclick = openFinishModal;
+      } else {
+        nextBtn.innerHTML = `Selanjutnya &rarr;`;
+        nextBtn.className = "px-3.5 sm:px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs sm:text-sm shadow-sm transition cursor-pointer";
+        nextBtn.onclick = () => navigateQuestion(1);
+      }
+
+      // Update Status Ragu-Ragu
+      const doubtCheck = document.getElementById("doubt-checkbox");
+      if (doubtfulFlags[currentIndex]) {
+        doubtCheck.innerHTML = "&check;";
+        doubtCheck.className = "w-4 h-4 rounded border border-amber-700 bg-amber-500 text-white inline-flex items-center justify-center text-xs font-bold";
+      } else {
+        doubtCheck.innerHTML = "";
+        doubtCheck.className = "w-4 h-4 rounded border border-amber-600 bg-white inline-flex items-center justify-center text-xs font-bold";
+      }
+    }
+
+    function selectOption(optKey) {
+      userAnswers[currentIndex] = optKey;
+      renderQuestion();
+      renderNavGrids();
+    }
+
+    function toggleDoubt() {
+      doubtfulFlags[currentIndex] = !doubtfulFlags[currentIndex];
+      renderQuestion();
+      renderNavGrids();
+    }
+
+    function navigateQuestion(step) {
+      const target = currentIndex + step;
+      if (target >= 0 && target < QUESTIONS.length) {
+        currentIndex = target;
+        renderQuestion();
+        renderNavGrids();
+      }
+    }
+
+    function jumpToQuestion(idx) {
+      currentIndex = idx;
+      renderQuestion();
+      renderNavGrids();
+      toggleMobileNav(false);
+    }
+
+    // 5. Render Grid Navigasi 1..40
+    function renderNavGrids() {
+      const answeredCount = userAnswers.filter(a => a !== null).length;
+      const doubtCount = doubtfulFlags.filter(Boolean).length;
+
+      document.getElementById("desktop-progress-text").textContent = `${answeredCount} / ${QUESTIONS.length} Terjawab`;
+      document.getElementById("mobile-progress-badge").textContent = `${answeredCount}/${QUESTIONS.length}`;
+      document.getElementById("mobile-modal-summary").textContent = `${answeredCount} Terjawab • ${doubtCount} Ragu-ragu`;
+
+      const buildGridHtml = () => {
+        return QUESTIONS.map((q, idx) => {
+          let btnStyle = "bg-white border-slate-300 text-slate-700 hover:bg-slate-100";
+          if (idx === currentIndex) {
+            btnStyle = "bg-blue-600 border-blue-600 text-white ring-2 ring-blue-300";
+          } else if (doubtfulFlags[idx]) {
+            btnStyle = "bg-amber-400 border-amber-500 text-slate-900";
+          } else if (userAnswers[idx] !== null) {
+            btnStyle = "bg-emerald-500 border-emerald-600 text-white";
+          }
+
+          const ansBadge = userAnswers[idx]
+            ? `<span class="text-[9px] font-extrabold opacity-90 block leading-none mt-0.5">${userAnswers[idx]}</span>`
+            : "";
+
+          return `
+            <button
+              type="button"
+              onclick="jumpToQuestion(${idx})"
+              class="h-10 rounded-lg border font-bold text-xs flex flex-col items-center justify-center transition cursor-pointer ${btnStyle}"
+            >
+              <span>${q.no}</span>
+              ${ansBadge}
+            </button>
+          `;
+        }).join("");
+      };
+
+      const gridMarkup = buildGridHtml();
+      document.getElementById("desktop-nav-grid").innerHTML = gridMarkup;
+      document.getElementById("mobile-nav-grid").innerHTML = gridMarkup;
+    }
+
+    function toggleMobileNav(show) {
+      const modal = document.getElementById("mobile-nav-modal");
+      if (show) {
+        modal.classList.remove("hidden");
+      } else {
+        modal.classList.add("hidden");
+      }
+    }
+
+    // 6. Modal Konfirmasi & Pengumpulan Jawaban
+    function openFinishModal() {
+      const answeredCount = userAnswers.filter(a => a !== null).length;
+      const doubtCount = doubtfulFlags.filter(Boolean).length;
+      const unansweredCount = QUESTIONS.length - answeredCount;
+
+      document.getElementById("summary-answered").textContent = `${answeredCount} dari ${QUESTIONS.length} soal`;
+      document.getElementById("summary-doubt").textContent = `${doubtCount} soal`;
+      document.getElementById("summary-unanswered").textContent = `${unansweredCount} soal`;
+
+      document.getElementById("finish-modal").classList.remove("hidden");
+    }
+
+    function closeFinishModal() {
+      document.getElementById("finish-modal").classList.add("hidden");
+    }
+
+    function submitExam() {
+      clearInterval(timerInterval);
+      closeFinishModal();
+      toggleMobileNav(false);
+
+      document.getElementById("screen-exam").classList.add("hidden");
+      document.getElementById("screen-result").classList.remove("hidden");
+
+      computeAndRenderResults();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    // 7. Perhitungan Skor & Pembahasan
+    function computeAndRenderResults() {
+      let correct = 0;
+      let wrong = 0;
+      let empty = 0;
+
+      const topicStats = {
+        "Bilangan Berpangkat & Bentuk Akar": { total: 0, correct: 0 },
+        "Bangun Ruang Sisi Datar": { total: 0, correct: 0 },
+        "Bangun Ruang Sisi Lengkung": { total: 0, correct: 0 }
+      };
+
+      QUESTIONS.forEach((q, idx) => {
+        const ans = userAnswers[idx];
+        topicStats[q.topic].total++;
+        if (ans === null) {
+          empty++;
+        } else if (ans === q.answer) {
+          correct++;
+          topicStats[q.topic].correct++;
+        } else {
+          wrong++;
+        }
+      });
+
+      const score = ((correct / QUESTIONS.length) * 100).toFixed(1).replace(".0", "");
+      document.getElementById("res-score").textContent = score;
+      document.getElementById("res-correct").textContent = correct;
+      document.getElementById("res-wrong").textContent = wrong;
+      document.getElementById("res-empty").textContent = empty;
+
+      const numScore = parseFloat(score);
+      let predikat = "Perlu Bimbingan";
+      if (numScore >= 90) predikat = "Sangat Baik (A)";
+      else if (numScore >= 80) predikat = "Baik (B)";
+      else if (numScore >= 70) predikat = "Cukup (C)";
+      document.getElementById("res-predicate").textContent = `Predikat: ${predikat}`;
+
+      // Info Peserta & Durasi
+      const usedSeconds = TOTAL_SECONDS - Math.max(0, remainingSeconds);
+      const minsUsed = Math.floor(usedSeconds / 60);
+      const secsUsed = usedSeconds % 60;
+      document.getElementById("res-name").textContent = studentData.nama;
+      document.getElementById("res-nis").textContent = studentData.nis;
+      document.getElementById("res-class").textContent = studentData.kelas;
+      document.getElementById("res-duration").textContent = `${minsUsed} menit ${secsUsed} detik`;
+
+      // Render Topic Mastery Bars
+      const topicContainer = document.getElementById("topic-analysis-container");
+      topicContainer.innerHTML = Object.entries(topicStats).map(([topicName, stat]) => {
+        const pct = Math.round((stat.correct / stat.total) * 100);
+        return `
+          <div>
+            <div class="flex justify-between text-xs font-semibold mb-1">
+              <span class="text-slate-700">${topicName}</span>
+              <span class="text-slate-600">${stat.correct}/${stat.total} Benar (${pct}%)</span>
+            </div>
+            <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden border border-slate-200">
+              <div class="h-full bg-blue-600 rounded-full" style="width: ${pct}%"></div>
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      filterReview("all");
+    }
+
+    function filterReview(mode) {
+      // Update filter button styles
+      ["all", "wrong", "correct"].forEach(key => {
+        const btn = document.getElementById(`filter-${key}`);
+        if (key === mode) {
+          btn.className = "px-3 py-1.5 rounded-lg text-xs font-bold bg-blue-600 text-white cursor-pointer";
+        } else {
+          btn.className = "px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-200 text-slate-700 hover:bg-slate-300 cursor-pointer";
+        }
+      });
+
+      const listEl = document.getElementById("review-list");
+      const filtered = QUESTIONS.map((q, idx) => ({ q, idx, userAns: userAnswers[idx] }))
+        .filter(item => {
+          if (mode === "correct") return item.userAns === item.q.answer;
+          if (mode === "wrong") return item.userAns !== item.q.answer;
+          return true;
+        });
+
+      if (filtered.length === 0) {
+        listEl.innerHTML = `<div class="p-8 text-center text-sm text-slate-500">Tidak ada soal pada kategori filter ini.</div>`;
+        return;
+      }
+
+      listEl.innerHTML = filtered.map(({ q, userAns }) => {
+        const isCorrect = userAns === q.answer;
+        const statusBadge = isCorrect
+          ? `<span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">&check; Benar</span>`
+          : userAns === null
+          ? `<span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800 border border-amber-200">Tidak Dijawab</span>`
+          : `<span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-rose-100 text-rose-800 border border-rose-200">&times; Salah</span>`;
+
+        const statementsHtml = q.statements
+          ? `<div class="my-2 pl-3 border-l-2 border-slate-300 space-y-1 text-xs sm:text-sm text-slate-700">${q.statements.map(s => `<div>${s}</div>`).join("")}</div>`
+          : "";
+
+        return `
+          <div class="p-4 sm:p-6 space-y-3">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="w-7 h-7 rounded-lg bg-slate-800 text-white font-bold text-xs flex items-center justify-center">${q.no}</span>
+                <span class="text-xs font-semibold text-slate-500">${q.type} • ${q.topic}</span>
+              </div>
+              ${statusBadge}
+            </div>
+
+            <div class="text-sm sm:text-base text-slate-800 leading-relaxed">
+              ${q.text}
+              ${q.svg ? `<div class="my-2.5">${q.svg}</div>` : ""}
+              ${q.tableHtml || ""}
+              ${statementsHtml}
+              ${q.questionPrompt ? `<div class="mt-1">${q.questionPrompt}</div>` : ""}
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm">
+              <div class="p-2.5 rounded-xl border ${isCorrect ? "bg-emerald-50 border-emerald-200 text-emerald-900" : "bg-rose-50 border-rose-200 text-rose-900"}">
+                <span class="font-semibold">Jawaban Anda:</span>
+                ${userAns ? `<strong>${userAns}.</strong> ${q.options[userAns]}` : "<em>(Kosong)</em>"}
+              </div>
+              <div class="p-2.5 rounded-xl border bg-blue-50 border-blue-200 text-blue-950">
+                <span class="font-semibold">Kunci Jawaban:</span>
+                <strong>${q.answer}.</strong> ${q.options[q.answer]}
+              </div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-700">
+              <strong class="text-slate-900">Pembahasan:</strong> ${q.explanation}
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function resetSimulation() {
+      userAnswers = new Array(QUESTIONS.length).fill(null);
+      doubtfulFlags = new Array(QUESTIONS.length).fill(false);
+      remainingSeconds = TOTAL_SECONDS;
+      currentIndex = 0;
+
+      document.getElementById("screen-result").classList.add("hidden");
+      document.getElementById("screen-login").classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>
